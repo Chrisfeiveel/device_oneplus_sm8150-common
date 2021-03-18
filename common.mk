@@ -16,13 +16,9 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-system \
-    $(LOCAL_PATH)/overlay-yaap
+    $(LOCAL_PATH)/overlay-derp
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
-
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-system
 
 # A/B
 AB_OTA_UPDATER := true
@@ -96,7 +92,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AntHalService
 
-# YAAP Device Settings
+# Derp Device Settings
 PRODUCT_PACKAGES += \
     DeviceSettings
 
