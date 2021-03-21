@@ -23,7 +23,7 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 DERP_ROOT="${MY_DIR}/../../.."
 
-HELPER="${DERP_ROOT}/vendor/derp/build/tools/extract_utils.sh"
+HELPER="${aex_ROOT}/vendor/aex/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -31,7 +31,7 @@ fi
 source "${HELPER}"
 
 # Initialize the helper for common
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${DERP_ROOT}" true
+setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${aex_ROOT}" true
 
 # Copyright headers and guards
 write_headers "guacamole guacamoleb guacamoleg hotdog hotdogb hotdogg"
